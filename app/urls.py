@@ -18,9 +18,11 @@ from django.urls import path, include
 from rest_framework import routers
 
 from polls.api.views import QuestionViewSet
+from polls.api.views import ChoiceViewSet
 
 router = routers.DefaultRouter()
-router.register('polls', QuestionViewSet)
+router.register('question', QuestionViewSet)
+router.register('choice', ChoiceViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
