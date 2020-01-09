@@ -1,0 +1,1 @@
+Project latihan Django Framework
