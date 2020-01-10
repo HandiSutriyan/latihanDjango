@@ -1,2 +1,4 @@
 mysqlclient
 djangorestframework
+django-filter
+djangorestframework-jwt

@@ -21,14 +21,15 @@ class QuestionSerializer(serializers.ModelSerializer):
         )
     #override function for method post
     def create(self, validated_data):
+
         created_by_id = validated_data.get("created_by_id")
         validated_data.pop("created_by_id", None)
 
         q = Question(**validated_data)
 
         #relate to user
-        user = User.objects.filter(id=created_by_id).first()
-        q.created_by = user
+        # user = User.objects.filter(id=created_by_id).first()
+        # q.created_by = user
         q.save()
 
         return q

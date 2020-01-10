@@ -27,7 +27,7 @@ class QuestionViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
         # self.perform_create(serializer)
         # headers = self.get_success_headers(serializer.data)
-        serializer.save()
+        serializer.save(created_by=request.user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 class ChoiceViewSet(viewsets.ModelViewSet):
