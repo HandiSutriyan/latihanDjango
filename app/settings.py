@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'rest_framework_jwt',
+    'rest_framework_recursive',
     #internal import
     'user.apps.UserConfig',
     'polls.apps.PollsConfig',
@@ -118,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Jakarta'
 
 USE_I18N = True
 
@@ -143,7 +144,8 @@ REST_FRAMEWORK = {
 }
 
 JWT_AUTH = {
-    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=1),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
 }
 
 STATIC_URL = '/static/'
