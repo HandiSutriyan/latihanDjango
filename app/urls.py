@@ -19,8 +19,10 @@ from rest_framework import routers
 
 from polls.api.views import QuestionViewSet
 from polls.api.views import ChoiceViewSet
+from user.api.views import UserViewSet
 
 router = routers.DefaultRouter()
+router.register('user', UserViewSet)
 router.register('question', QuestionViewSet)
 router.register('choice', ChoiceViewSet)
 
