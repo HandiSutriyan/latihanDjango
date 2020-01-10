@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     #third parties
     'rest_framework',
     #internal import
+    'user.apps.UserConfig',
     'polls.apps.PollsConfig',
     #system
     'django.contrib.admin',
